@@ -14,11 +14,10 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [16.x]
+        node-version: [12.x]
 
     steps:
       - name: NPM Publisher
-      # You may pin to the exact commit or the version.
-      # uses: lyzhang1999/npm-publish@61d419d5bb515116b1745c3da8575d37c58edff7
-      - uses: lyzhang1999/npm-publish@v1.0.2
-          
+      - uses: JS-DevTools/npm-publish@v3.1.1
+        with:
+            token: ${{ env.NPM_TOKEN }}
